@@ -1,0 +1,50 @@
+@use "../utils/mixins" as mxn;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as clr;
+@use "../theme/spacing" as spc;
+
+.offers {
+	@include mxn.space-safe(1200);
+
+	display: grid;
+	gap: spc.$xs;
+
+	&__header {
+		@include mxn.section-header;
+	}
+
+	&__deck {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: spc.$xxl;
+	}
+
+	&__card {
+		box-shadow: 0 0 6px 0 clr.$black;
+
+		text-align: center;
+
+		&-title {
+			margin: spc.$xs 0;
+		}
+
+		&-price {
+			display: block;
+			background-color: clr.$gray;
+			padding: spc.$sm 0;
+			margin-top: spc.$xxs 0;
+
+			font-weight: typo.$fw-medium;
+		}
+	}
+
+	&__feature {
+		padding: spc.$xs spc.$xxl;
+		border-bottom: 1px solid clr.$gray;
+
+		display: flex;
+		flex-flow: row nowrap;
+		gap: spc.$xxs;
+		justify-content: center;
+	}
+}

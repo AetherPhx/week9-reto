@@ -1,0 +1,31 @@
+@use "../utils/mixins" as mxn;
+@use "../theme/spacing" as spc;
+@use "../theme/colors" as clr;
+
+.services {
+	@include mxn.space-safe(1200);
+
+	display: grid;
+	gap: spc.$xxl;
+
+	&__header {
+		@include mxn.section-header;
+	}
+
+	&__deck {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: spc.$xxl;
+	}
+
+	&__card {
+		padding-bottom: spc.$sm;
+		box-shadow: 0 0 6px 0 clr.$black;
+
+		display: flex;
+		flex-direction: column;
+		gap: spc.$md;
+
+		text-align: center;
+	}
+}

@@ -1,0 +1,17 @@
+@use "../utils/functions" as fn;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$fm-main: "Lato", Tahoma, Arial, sans-serif;
+$fm-sec: "Roboto", Verdana, Arial, sans-serif;
+
+$fs-xsmall: fn.pxToRem(12);
+$fs-small: fn.pxToRem(14);
+$fs-medium: fn.pxToRem(16);
+$fs-large: fn.pxToRem(20);
+$fs-xlarge: fn.pxToRem(24);
+$fs-xxlarge: fn.pxToRem(48);
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;

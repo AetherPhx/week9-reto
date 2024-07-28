@@ -1,0 +1,21 @@
+@use "../utils/functions" as fn;
+@use "../theme/spacing" as spc;
+
+@mixin space-safe($width) {
+	max-width: fn.pxToRem($width);
+	margin: 0 auto;
+}
+
+@mixin bg-img($url, $position) {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
+	background-size: cover;
+	background-position: $position;
+	background-repeat: no-repeat;
+}
+
+@mixin section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: spc.$md;
+}

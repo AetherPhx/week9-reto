@@ -1,0 +1,67 @@
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mxn;
+@use "../theme/typography" as typo;
+@use "../theme/spacing" as spc;
+@use "../theme/colors" as clr;
+
+.header {
+	@include mxn.space-safe(1200);
+
+	background-color: clr.$white;
+	padding: spc.$sm spc.$xl;
+	// border-radius: spc.$lg;
+
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: spc.$lg;
+
+	position: sticky;
+	top: 0;
+
+	&__logo {
+		width: auto;
+	}
+
+	&__nav {
+		width: 100%;
+		&-list {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: spc.$lg;
+		}
+		&-item {
+			font-weight: typo.$fw-bold;
+			text-align: center;
+
+			:hover {
+				color: clr.$red;
+			}
+
+			:active {
+				border-bottom: fn.pxToRem(2) solid clr.$red;
+			}
+		}
+
+		&-link {
+			color: clr.$black;
+			// &:hover {
+			// }
+		}
+	}
+
+	&__contact {
+		background-color: inherit;
+		padding: spc.$xxs spc.$xl;
+		border: fn.pxToRem(2) solid clr.$red;
+
+		color: clr.$black;
+		font-weight: typo.$fw-bold;
+
+		&:hover {
+			color: clr.$red;
+		}
+	}
+}

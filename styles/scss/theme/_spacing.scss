@@ -1,0 +1,9 @@
+@use "../utils/functions" as fn;
+
+$xxs: fn.pxToRem(8);
+$xs: fn.pxToRem(12);
+$sm: fn.pxToRem(16);
+$md: fn.pxToRem(20);
+$lg: fn.pxToRem(26);
+$xl: fn.pxToRem(32);
+$xxl: fn.pxToRem(64);

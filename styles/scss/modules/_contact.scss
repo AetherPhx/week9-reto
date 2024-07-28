@@ -1,0 +1,78 @@
+@use "../utils/mixins" as mxn;
+@use "../theme/typography" as typo;
+@use "../theme/spacing" as spc;
+@use "../theme/colors" as clr;
+
+.contact {
+	@include mxn.space-safe(1200);
+	width: 100%;
+	margin-bottom: spc.$xl;
+	font-weight: typo.$fw-medium;
+
+	&__header {
+		@include mxn.section-header;
+	}
+
+	&__data {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: spc.$sm;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-areas:
+			"name phone email"
+			"msg msg msg";
+		gap: spc.$sm;
+
+		&-field {
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		&-label {
+			margin-bottom: spc.$xxs;
+		}
+
+		&-input {
+			padding: spc.$xxs;
+			border: 1px solid clr.$gray;
+		}
+
+		&-name {
+			@extend .contact__form-field;
+			grid-area: name;
+		}
+
+		&-phone {
+			@extend .contact__form-field;
+			grid-area: phone;
+		}
+
+		&-email {
+			@extend .contact__form-field;
+			grid-area: email;
+		}
+
+		&-msg {
+			@extend .contact__form-field;
+			grid-area: msg;
+
+			& textarea {
+				height: 10rem;
+			}
+		}
+
+		&-submit {
+			width: 150px;
+			background-color: clr.$green;
+			padding: spc.$xs;
+			border: none;
+			border-radius: 8px;
+
+			color: clr.$white;
+		}
+	}
+}

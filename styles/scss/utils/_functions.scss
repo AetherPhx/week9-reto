@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@function pxToRem($px) {
+	@if math.is-unitless($px) {
+		//Si es un numero sin unidad retorna su valor en rem
+		@return math.div($px, 16) * 1rem;
+	} @else {
+		// Si tiene unidades, lanza un error.
+		@error 'No uses unidades en la fn rem.';
+	}
+}

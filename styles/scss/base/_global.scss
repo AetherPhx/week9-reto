@@ -1,0 +1,52 @@
+@use "../theme/typography" as typo;
+@use "../theme/colors" as clr;
+@use "../theme/spacing" as spc;
+@use "../utils/functions" as fn;
+
+body {
+	background-color: clr.$white;
+
+	font-family: typo.$fm-main;
+	font-size: typo.$fs-medium;
+	font-weight: typo.$fw-regular;
+	line-height: 1.5;
+	color: clr.$black;
+}
+
+h1,
+h2,
+h3 {
+	font-family: typo.$fm-sec;
+	font-size: typo.$fs-xlarge;
+	font-weight: typo.$fw-medium;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+h1 {
+	font-size: typo.$fs-xxlarge;
+	font-weight: typo.$fw-bold;
+	color: clr.$yellow;
+	text-shadow: 0 0 2px clr.$black;
+	text-align: center;
+}
+h3 {
+	font-size: typo.$fs-large;
+	text-transform: capitalize;
+}
+
+p {
+	margin: spc.$xxs 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.separator {
+	display: block;
+	width: fn.pxToRem(100);
+	height: fn.pxToRem(2);
+	background-color: clr.$red;
+}

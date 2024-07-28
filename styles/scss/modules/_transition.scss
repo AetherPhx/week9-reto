@@ -1,0 +1,15 @@
+@use "../utils/mixins" as mxn;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as clr;
+
+.transition {
+	@include mxn.bg-img("/assets/food-table.jpg", start);
+	height: 300px;
+
+	display: grid;
+	place-items: center;
+	font-size: typo.$fs-large;
+	font-weight: typo.$fw-medium;
+	text-align: center;
+	color: clr.$white;
+}

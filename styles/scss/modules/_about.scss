@@ -1,0 +1,22 @@
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mxn;
+@use "../theme/typography" as typo;
+@use "../theme/spacing" as spc;
+@use "../theme/colors" as clr;
+
+.about {
+	@include mxn.space-safe(1200);
+
+	display: grid;
+	gap: spc.$xxl;
+
+	&__header {
+		@include mxn.section-header;
+	}
+
+	&__body {
+		display: grid;
+		gap: spc.$lg;
+		grid-template-columns: 1fr 1.5fr;
+	}
+}

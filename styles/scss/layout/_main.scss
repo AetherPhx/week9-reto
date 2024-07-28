@@ -1,0 +1,5 @@
+@use "../theme/spacing" as spc;
+.main {
+	display: grid;
+	gap: spc.$xxl;
+}

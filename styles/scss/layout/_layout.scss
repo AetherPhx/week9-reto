@@ -1,0 +1,5 @@
+@use "../utils/mixins" as mxn;
+
+.layout {
+	@include mxn.space-safe(1400);
+}
